@@ -1,0 +1,159 @@
+---
+import { Image } from "astro:assets";
+import MyPhoto from "./../assets/photo-dmoscaiza-4k.jpeg";
+import Available from "./Status/Available.astro";
+---
+
+<main>
+  <section id="about">
+    <Image class="my-photo" src={MyPhoto} alt="photo-diego-moscaiza-4k" />
+    <div>
+      <div class="name">
+        <h1>
+          Diego Moscaiza Anampa
+          <span class="flag-icon flag-icon-pe"></span>
+        </h1>
+      </div>
+      <p class="profesion">Desarrollador Web FullStack</p>
+      <Available />
+    </div>
+  </section>
+
+  <section class="contact">
+    <a class="email" href="mailto:">
+      <i class="fas fa-envelope"></i>
+      diego-moscaiza@outlook.com</a
+    >
+    <a
+      class="github"
+      href="https://github.com/diego-moscaiza"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-github"></i>
+      Github</a
+    >
+    <a
+      class="linkedin"
+      href="https://www.linkedin.com/in/diego-moscaiza/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-linkedin-in"></i>
+      LinkedIn</a
+    >
+  </section>
+
+  <section>
+    <h2>Sobre mí</h2>
+    <p>
+      Soy un desarrollador web con experiencia en el desarrollo de aplicaciones
+      web y móviles. Me encanta aprender nuevas tecnologías y compartir
+      conocimientos.
+    </p>
+  </section>
+</main>
+
+<style>
+  :root {
+    --light-color: #f8f9fa;
+    --dark-color: #141515;
+  }
+
+  main {
+    width: 600px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* border: 1px solid #f0ff; */
+  }
+
+  /* About me */
+
+  #about {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  #about > .my-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  #about > div > .profesion {
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .contact > a {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: rgb(204, 204, 204);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition:
+      background-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .contact > a:hover {
+    background-color: rgb(204, 246, 204);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .contact > a.email {
+    background-color: rgba(44, 151, 223);
+    color: var(--light-color);
+  }
+
+  .contact > a.email:hover {
+    background-color: rgba(44, 151, 223);
+  }
+
+  .contact > a.github {
+    background-color: rgb(0, 0, 0);
+    color: var(--light-color);
+  }
+
+  .contact > a.github:hover {
+    background-color: rgb(0, 0, 0);
+  }
+
+  .contact > a.linkedin {
+    background-color: rgb(0, 118, 181);
+    color: var(--light-color);
+  }
+
+  .contact > a.linkedin:hover {
+    background-color: rgb(0, 118, 181);
+  }
+
+  .contact > .social-icons a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  /* Responsiveness */
+  /* @media (max-width: 768px) {
+    #about {
+      flex-direction: column;
+    }
+    .contact {
+      flex-direction: column;
+    }
+  } */
+</style>
